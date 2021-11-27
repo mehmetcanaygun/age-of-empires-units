@@ -1,0 +1,11 @@
+.app-container {
+  width: 100%;
+}
+
+// Media Queries
+@media (min-width: 1300px) {
+  .app-container {
+    width: $container-width;
+    margin: 0 auto;
+  }
+}

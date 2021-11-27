@@ -1,0 +1,37 @@
+.navbar {
+  height: $navbar-height;
+  padding: 0 $px-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-light;
+  box-shadow: 0px 3px 10px rgba(#000, 0.2);
+
+  .navbar-nav {
+    ul {
+      display: flex;
+
+      li {
+        margin-left: 20px;
+
+        a.active {
+          font-weight: bold;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (min-width: 1300px) {
+  .navbar {
+    padding: 0 $px-xlg;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 $px-sm;
+  }
+}

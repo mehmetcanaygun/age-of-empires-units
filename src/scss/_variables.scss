@@ -1,0 +1,23 @@
+// Colors
+$color-primary: #6b210a;
+$color-secondary: #9c7f52;
+$color-tertiary: #230b05;
+$color-light: #f0f0f0;
+$color-dark: #181818;
+
+$bg-gradient: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+
+// Fonts
+$font-title: "MedievalSharp", cursive;
+$font-text: "Montserrat", sans-serif;
+
+// Sizes
+$container-width: 1300px;
+$navbar-height: 80px;
+
+// Padding
+$px-xlg: calc((100vw - 1300px) / 2);
+$px-lg: 5%;
+$py-lg: 60px;
+$px-sm: 16px;
+$py-sm: 20px;
