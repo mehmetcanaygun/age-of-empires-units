@@ -1,0 +1,82 @@
+.footer {
+  padding: $py-sm $px-lg;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-dark;
+
+  .logo {
+    width: 150px;
+    height: 130px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lighten($color-dark, 3);
+    border-radius: 6px;
+
+    img {
+      height: 80%;
+    }
+
+    span {
+      font-size: 0.8rem;
+      color: $color-light;
+      font-family: $font-title;
+    }
+  }
+
+  .footer-msg {
+    color: $color-light;
+    align-self: flex-end;
+
+    img {
+      height: 20px;
+      animation: heartBeat 0.8s ease-in-out infinite;
+    }
+
+    a {
+      color: $color-light;
+    }
+
+    a:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+// Animations
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+// Media Queries
+@media (min-width: 1300px) {
+  .footer {
+    padding: $py-sm $px-xlg;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: $py-sm 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .footer-msg {
+      align-self: center;
+      font-size: 0.8rem;
+    }
+  }
+}

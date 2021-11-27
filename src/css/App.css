@@ -129,6 +129,123 @@ a {
   }
 }
 
+.footer {
+  padding: 20px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #181818;
+}
+
+.footer .logo {
+  width: 150px;
+  height: 130px;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #202020;
+  border-radius: 6px;
+}
+
+.footer .logo img {
+  height: 80%;
+}
+
+.footer .logo span {
+  font-size: 0.8rem;
+  color: #f0f0f0;
+  font-family: "MedievalSharp", cursive;
+}
+
+.footer .footer-msg {
+  color: #f0f0f0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer .footer-msg img {
+  height: 20px;
+  -webkit-animation: heartBeat 0.8s ease-in-out infinite;
+          animation: heartBeat 0.8s ease-in-out infinite;
+}
+
+.footer .footer-msg a {
+  color: #f0f0f0;
+}
+
+.footer .footer-msg a:hover {
+  color: #9c7f52;
+}
+
+@-webkit-keyframes heartBeat {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1300px) {
+  .footer {
+    padding: 20px calc((100vw - 1300px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .logo {
+    margin-bottom: 30px;
+  }
+  .footer .footer-msg {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 0.8rem;
+  }
+}
+
 .home-page {
   display: -webkit-box;
   display: -ms-flexbox;
