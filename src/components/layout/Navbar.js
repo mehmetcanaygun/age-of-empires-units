@@ -4,7 +4,8 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <a href="/" className="logo">
-        LOGO
+        <img src="./assets/logo.png" alt="Logo" />
+        <span>Age of Empires Units</span>
       </a>
       <nav className="navbar-nav">
         <ul>

@@ -70,6 +70,31 @@ a {
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.navbar .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo img {
+  height: 80%;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "MedievalSharp", cursive;
+  color: #6b210a;
+}
+
 .navbar .navbar-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +119,13 @@ a {
 @media (max-width: 768px) {
   .navbar {
     padding: 0 16px;
+  }
+  .navbar .logo img {
+    height: 60%;
+    margin-right: 6px;
+  }
+  .navbar .logo span {
+    font-size: 1.1rem;
   }
 }
 
