@@ -1,0 +1,125 @@
+.home-page {
+  display: flex;
+  justify-content: space-between;
+
+  .info {
+    width: 50%;
+    padding: 0 20px 0 $px-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-family: $font-title;
+      font-size: 4rem;
+      color: $color-primary;
+      margin-bottom: 60px;
+      position: relative;
+
+      span {
+        font-family: inherit;
+        color: $color-tertiary;
+      }
+    }
+
+    .cta {
+      width: 260px;
+      height: 80px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      background-color: $color-light;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-tertiary;
+      border-radius: 6px;
+      box-shadow: 0px 2px 8px rgba(#000, 0.3);
+      transition: background-color 0.3s;
+
+      img {
+        height: 90%;
+        margin-right: 12px;
+        transition: transform 0.3s;
+      }
+    }
+
+    .cta:hover {
+      background-color: $color-secondary;
+
+      img {
+        transform: rotate(12deg);
+      }
+    }
+  }
+
+  .img {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    box-shadow: -6px 16px 35px rgba(#000, 0.4);
+  }
+}
+
+// Media Queries
+@media (min-width: 1300px) {
+  .home-page {
+    .info {
+      padding: 0 20px 0 $px-xlg;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .info {
+      width: 100%;
+      padding: $py-sm $px-sm;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .cta {
+        margin: 0 auto;
+      }
+    }
+
+    .img {
+      width: calc(100vw - 32px);
+      height: 360px;
+      box-shadow: 0px 0px 15px rgba(#000, 0.4);
+      margin: 0 auto 40px auto;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .home-page {
+    .info {
+      .title {
+        font-size: 2rem;
+      }
+
+      .cta {
+        width: 200px;
+        height: 60px;
+        font-size: 1rem;
+      }
+    }
+
+    .img {
+      border-radius: 10px;
+    }
+  }
+}

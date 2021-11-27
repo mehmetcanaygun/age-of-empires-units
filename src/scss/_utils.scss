@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.page {
+  min-height: 100vh;
+}
+
 // Media Queries
 @media (min-width: 1300px) {
   .app-container {

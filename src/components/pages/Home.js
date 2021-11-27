@@ -1,7 +1,20 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="page home-page">
-      <h2>Home Page</h2>
+      <div className="info">
+        <h1 className="title">
+          Learn Everything About All Units From <span>Age Of Empires</span>
+        </h1>
+        <Link to="/units" className="cta">
+          <img src="./assets/axe.png" alt="Axe" /> See Units
+        </Link>
+      </div>
+      <div
+        className="img"
+        style={{ backgroundImage: "url(./assets/home-bg.jpg)" }}
+      ></div>
     </div>
   );
 };
