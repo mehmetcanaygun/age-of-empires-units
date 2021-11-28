@@ -15,6 +15,22 @@ const AppReducer = (state, action) => {
         ...state,
         unit: state.units.filter((unit) => unit.id === +payload)[0],
       };
+    case types.SET_AGE_FILTER:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          age: payload,
+        },
+      };
+    case types.SET_COST_FILTER:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          costs: payload,
+        },
+      };
     case types.SET_LOADING:
       return {
         ...state,

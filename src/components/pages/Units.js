@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AppContext from "../../context/appContext";
 
 import Filters from "../units/Filters";

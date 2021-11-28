@@ -43,6 +43,21 @@ const AppState = (props) => {
     });
   };
 
+  // Set Filters
+  const setFilters = (type, value) => {
+    if (type === "age") {
+      dispatch({
+        type: types.SET_AGE_FILTER,
+        payload: value,
+      });
+    } else {
+      dispatch({
+        type: types.SET_COST_FILTER,
+        payload: value,
+      });
+    }
+  };
+
   // Set Loading
   const setLoading = () => {
     dispatch({ type: types.SET_LOADING });
@@ -57,6 +72,7 @@ const AppState = (props) => {
         filters: state.filters,
         getUnits,
         setUnit,
+        setFilters,
         setLoading,
       }}
     >

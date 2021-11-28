@@ -1,0 +1,16 @@
+.units-page {
+  padding: $py-lg $px-lg;
+}
+
+// Media Queries
+@media (min-width: 1300px) {
+  .units-page {
+    padding: $py-lg $px-xlg;
+  }
+}
+
+@media (max-width: 768px) {
+  .units-page {
+    padding: $py-lg $px-sm;
+  }
+}

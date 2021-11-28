@@ -1,0 +1,149 @@
+.unit-filters-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  .age-filter,
+  .cost-filter {
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    border-radius: 0 6px 6px 6px;
+    background: $color-light;
+    position: relative;
+  }
+
+  .age-filter {
+    width: 28%;
+
+    button {
+      width: 100%;
+      border: none;
+      background: darken($color-light, 25);
+      color: $color-light;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: $color-secondary;
+      }
+    }
+
+    button:hover {
+      background-color: $color-tertiary;
+      color: $color-light;
+    }
+  }
+
+  .cost-filter {
+    width: 56%;
+
+    .range-col {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      label {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        span {
+          padding: 2px 4px;
+          border-radius: 4px;
+          background-color: darken($color-light, 5);
+        }
+      }
+    }
+  }
+
+  .age-filter::before,
+  .cost-filter::before {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 80px;
+    height: 24px;
+    background-color: $color-light;
+    border-radius: 6px 20px 0 0;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: $color-primary;
+    padding-left: 6px;
+    font-weight: bold;
+  }
+
+  .age-filter::before {
+    content: "Age";
+  }
+
+  .cost-filter::before {
+    content: "Cost";
+  }
+
+  .search-btn {
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: $color-secondary;
+    color: $color-light;
+    transition: background-color 0.3s;
+  }
+
+  .search-btn:hover {
+    background-color: $color-tertiary;
+  }
+}
+
+// Media Queries
+@media (max-width: 1024px) {
+  .unit-filters-form {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .age-filter,
+    .cost-filter {
+      width: 100%;
+    }
+
+    .age-filter {
+      margin-bottom: 30px;
+
+      button {
+        height: 40px;
+      }
+    }
+
+    .cost-filter {
+      margin-bottom: 8px;
+    }
+
+    .search-btn {
+      width: 140px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .unit-filters-form {
+    .cost-filter {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .unit-filters-form {
+    .search-btn {
+      width: 100%;
+    }
+  }
+}
