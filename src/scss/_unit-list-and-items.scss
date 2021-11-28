@@ -1,0 +1,67 @@
+.unit-list {
+  .list-title {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-light;
+    border-radius: 6px;
+
+    span {
+      border-left: 1px solid darken($color-light, 10);
+      padding: 6px;
+
+      &:not(:first-child) {
+        width: 30%;
+      }
+
+      &:first-child {
+        width: 10%;
+        border: none;
+      }
+    }
+  }
+
+  .unit-item {
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      background-color: $color-light;
+
+      span {
+        width: 30%;
+        padding: 8px 6px;
+        border-left: 1px solid darken($color-light, 10);
+      }
+
+      span:first-child {
+        width: 10%;
+        border: none;
+      }
+    }
+
+    &:nth-child(odd) {
+      a {
+        background-color: rgba($color-light, 0.7);
+      }
+    }
+
+    a:hover {
+      background-color: $color-primary;
+      color: $color-light;
+    }
+  }
+
+  li:nth-child(2) {
+    a {
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}

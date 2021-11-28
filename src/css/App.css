@@ -575,4 +575,70 @@ a {
     width: 100%;
   }
 }
+
+.unit-list .list-title {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.unit-list .list-title span {
+  border-left: 1px solid #d7d7d7;
+  padding: 6px;
+}
+
+.unit-list .list-title span:not(:first-child) {
+  width: 30%;
+}
+
+.unit-list .list-title span:first-child {
+  width: 10%;
+  border: none;
+}
+
+.unit-list .unit-item a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f0f0f0;
+}
+
+.unit-list .unit-item a span {
+  width: 30%;
+  padding: 8px 6px;
+  border-left: 1px solid #d7d7d7;
+}
+
+.unit-list .unit-item a span:first-child {
+  width: 10%;
+  border: none;
+}
+
+.unit-list .unit-item:nth-child(odd) a {
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+.unit-list .unit-item a:hover {
+  background-color: #6b210a;
+  color: #f0f0f0;
+}
+
+.unit-list li:nth-child(2) a {
+  border-radius: 6px 6px 0 0;
+}
+
+.unit-list li:last-child a {
+  border-radius: 0 0 6px 6px;
+}
 /*# sourceMappingURL=App.css.map */
