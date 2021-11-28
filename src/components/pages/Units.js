@@ -1,13 +1,17 @@
+import { useContext } from "react";
+import AppContext from "../../context/appContext";
+
 import Filters from "../units/Filters";
 import UnitList from "../units/UnitList";
 
 const Units = () => {
+  const appContext = useContext(AppContext);
+  const { units } = appContext;
+
   return (
     <div className="page units-page">
-      <h2>Units Page</h2>
-      <hr />
       <Filters />
-      <UnitList />
+      <UnitList units={units} />
     </div>
   );
 };

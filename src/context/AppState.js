@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import AppContext from "./appContext";
 import AppReducer from "./appReducer";
 import * as types from "./types";
+import axios from "axios";
 
 const AppState = (props) => {
   const initialState = {
@@ -20,7 +21,27 @@ const AppState = (props) => {
 
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  // Actions will be here
+  // Get Units
+  const getUnits = async () => {
+    try {
+      const res = await axios.get("./data/age-of-empires-units.json");
+
+      dispatch({
+        type: types.GET_UNITS,
+        payload: res.data.units,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // Set Unit
+  const setUnit = (id) => {
+    dispatch({
+      type: types.SET_UNIT,
+      payload: id,
+    });
+  };
 
   // Set Loading
   const setLoading = () => {
@@ -34,6 +55,8 @@ const AppState = (props) => {
         unit: state.unit,
         loading: state.loading,
         filters: state.filters,
+        getUnits,
+        setUnit,
         setLoading,
       }}
     >

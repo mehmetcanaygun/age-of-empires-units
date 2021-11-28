@@ -8,7 +8,8 @@
         "../scss/_utils.scss",
         "../scss/_navbar.scss",
         "../scss/_footer.scss",
-        "../scss/_home.scss"
+        "../scss/_home.scss",
+        "../scss/_units.scss"
     ],
     "names": [],
     "file": "App.css"
