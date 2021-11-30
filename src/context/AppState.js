@@ -32,6 +32,8 @@ const AppState = (props) => {
 
   // Get Units
   const getUnits = async () => {
+    setLoading();
+
     try {
       const res = await axios.get("./data/age-of-empires-units.json");
 

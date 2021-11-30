@@ -1,12 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AppContext from "../../context/appContext";
 
 import Filters from "../units/Filters";
 import UnitList from "../units/UnitList";
+import Spinner from "../layout/Spinner";
 
 const Units = () => {
   const appContext = useContext(AppContext);
-  const { units, filters } = appContext;
+  const { getUnits, loading, units, filters } = appContext;
 
   const filterUnits = (units) => {
     // Firstly, filter units by age and put them in a new array
@@ -83,6 +84,14 @@ const Units = () => {
       return costFilteredUnits;
     }
   };
+
+  useEffect(() => {
+    getUnits();
+
+    // eslint-disable-next-line
+  }, []);
+
+  if (loading) return <Spinner />;
 
   return (
     <div className="page units-page">

@@ -1,17 +1,6 @@
-import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import AppContext from "../../context/appContext";
 
 const Home = () => {
-  const appContext = useContext(AppContext);
-  const { getUnits } = appContext;
-
-  useEffect(() => {
-    getUnits();
-
-    // eslint-disable-next-line
-  }, []);
-
   return (
     <div className="page home-page">
       <div className="info">
