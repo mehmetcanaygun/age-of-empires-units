@@ -20,7 +20,7 @@ const AppReducer = (state, action) => {
         ...state,
         filters: {
           ...state.filters,
-          age: payload,
+          age: [...payload],
         },
       };
     case types.SET_COST_FILTER:
@@ -28,7 +28,7 @@ const AppReducer = (state, action) => {
         ...state,
         filters: {
           ...state.filters,
-          costs: payload,
+          cost: payload,
         },
       };
     case types.SET_LOADING:

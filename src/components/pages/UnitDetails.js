@@ -16,11 +16,44 @@ const UnitDetails = () => {
 
   return (
     <div className="page unit-details-page">
-      <h2>Unit Details Page</h2>
+      <div className="info">
+        <h1 className="title">
+          <span>{unit.id}.</span> {unit.name}
+        </h1>
 
-      <p>{unit.id}</p>
-      <p>{unit.name}</p>
-      <p>{unit.armor}</p>
+        <p className="description">{unit.description}</p>
+
+        <p>
+          <span>Age</span>: {unit.age}
+        </p>
+        <p>
+          <span>Cost (Wood)</span>: {unit?.cost?.Wood}
+        </p>
+        <p>
+          <span>Cost (Food)</span>: {unit?.cost?.Food}
+        </p>
+        <p>
+          <span>Cost (Gold)</span>: {unit?.cost?.Gold}
+        </p>
+        <p>
+          <span>Build Time</span>: {unit.build_time}
+        </p>
+        <p>
+          <span>Reload Time</span>: {unit.reload_time}
+        </p>
+        <p>
+          <span>Hit Points</span>: {unit.hit_points}
+        </p>
+        <p>
+          <span>Attack</span>: {unit.attack}
+        </p>
+        <p>
+          <span>Accuracy</span>: {unit.accuracy}
+        </p>
+      </div>
+      <div className="img">
+        <img src="/assets/axe.png" alt="Axe" />
+      </div>
     </div>
   );
 };

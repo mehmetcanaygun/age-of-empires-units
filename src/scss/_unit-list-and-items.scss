@@ -9,6 +9,7 @@
     span {
       border-left: 1px solid darken($color-light, 10);
       padding: 6px;
+      font-weight: bold;
 
       &:not(:first-child) {
         width: 30%;

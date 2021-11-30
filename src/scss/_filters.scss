@@ -15,7 +15,7 @@
   }
 
   .age-filter {
-    width: 28%;
+    width: 40%;
 
     button {
       width: 100%;
@@ -38,7 +38,7 @@
   }
 
   .cost-filter {
-    width: 56%;
+    width: 58%;
 
     .range-col {
       width: 100%;
@@ -120,14 +120,10 @@
       }
     }
 
-    .cost-filter {
-      margin-bottom: 8px;
-    }
-
-    .search-btn {
+    /* .search-btn {
       width: 140px;
       height: 40px;
-    }
+    } */
   }
 }
 
@@ -139,7 +135,7 @@
     }
   }
 }
-
+/* 
 @media (max-width: 425px) {
   .unit-filters-form {
     .search-btn {
@@ -147,3 +143,4 @@
     }
   }
 }
+ */

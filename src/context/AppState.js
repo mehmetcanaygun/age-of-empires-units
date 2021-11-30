@@ -10,11 +10,20 @@ const AppState = (props) => {
     unit: {},
     loading: false,
     filters: {
-      age: "All",
-      costs: {
-        wood: 0,
-        food: 0,
-        gold: 0,
+      age: ["Dark", "Feudal", "Castle", "Imperial"],
+      cost: {
+        Wood: {
+          isActive: false,
+          value: 0,
+        },
+        Food: {
+          isActive: false,
+          value: 0,
+        },
+        Gold: {
+          isActive: false,
+          value: 0,
+        },
       },
     },
   };
