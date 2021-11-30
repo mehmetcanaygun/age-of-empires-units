@@ -891,4 +891,86 @@ a {
             justify-content: center;
   }
 }
+
+.not-found-page {
+  padding: 60px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.not-found-page .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.not-found-page .container .title {
+  font-size: 8rem;
+  color: #6b210a;
+  margin-bottom: 30px;
+}
+
+.not-found-page .container .title img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid #6b210a;
+  margin: 0 10px;
+}
+
+.not-found-page .container .info {
+  margin-bottom: 20px;
+}
+
+.not-found-page .container a {
+  padding: 10px 18px;
+  border: 2px solid #6b210a;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.not-found-page .container a:hover {
+  background-color: #6b210a;
+  color: #f0f0f0;
+}
+
+@media (min-width: 1300px) {
+  .not-found-page {
+    padding: 60px calc((100vw - 1300px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found-page {
+    padding: 60px 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .not-found-page {
+    padding: 60px 16px;
+  }
+  .not-found-page .container .title {
+    font-size: 4rem;
+  }
+  .not-found-page .container .title img {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #6b210a;
+  }
+}
 /*# sourceMappingURL=App.css.map */
