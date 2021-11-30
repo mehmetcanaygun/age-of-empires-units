@@ -46,6 +46,7 @@
 
     .cta:hover {
       background-color: $color-secondary;
+      color: $color-light;
 
       img {
         transform: rotate(12deg);

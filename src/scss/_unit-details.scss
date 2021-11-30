@@ -24,7 +24,7 @@
         margin-right: 20px;
         border-radius: 50%;
         background-color: $color-primary;
-        color: $color-secondary;
+        color: $color-light;
         font-size: 1.8rem;
       }
     }
@@ -32,8 +32,8 @@
     .description {
       padding: 20px 10px;
       border-radius: 10px;
-      background-color: $color-dark;
-      color: $color-light;
+      background-color: $color-light;
+      color: $color-primary;
       font-style: italic;
       font-size: 1.2rem;
       margin-bottom: 20px;

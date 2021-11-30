@@ -21,7 +21,7 @@ const Home = () => {
       </div>
       <div
         className="img"
-        style={{ backgroundImage: "url(./assets/home-bg.jpg)" }}
+        style={{ backgroundImage: "url(./assets/home-bg.png)" }}
       ></div>
     </div>
   );
