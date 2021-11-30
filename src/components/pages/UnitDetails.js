@@ -11,6 +11,9 @@ const UnitDetails = () => {
   useEffect(() => {
     setUnit(id);
 
+    // Go to top of the page
+    window.scrollTo(0, 0);
+
     // eslint-disable-next-line
   }, []);
 

@@ -708,6 +708,15 @@ a {
   border-radius: 0 0 6px 6px;
 }
 
+@media (max-width: 425px) {
+  .unit-list .list-title span {
+    font-size: 14px;
+  }
+  .unit-list .unit-item a span {
+    font-size: 14px;
+  }
+}
+
 .unit-details-page {
   padding: 60px 5%;
   display: -webkit-box;

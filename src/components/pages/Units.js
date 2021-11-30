@@ -88,6 +88,9 @@ const Units = () => {
   useEffect(() => {
     getUnits();
 
+    // Go to top of the page
+    window.scrollTo(0, 0);
+
     // eslint-disable-next-line
   }, []);
 

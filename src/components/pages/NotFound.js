@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+  useEffect(() => {
+    // Go to top of the page
+    window.scrollTo(0, 0);
+
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="page not-found-page">
       <div className="container">
