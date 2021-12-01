@@ -39,3 +39,7 @@ npm run build
 **Not Found Page**
 
 ![Not Found Page](/public/assets/not-found.png)
+
+## Test Coverage
+
+![Test Coverage](/public/assets/test-coverage.png)
