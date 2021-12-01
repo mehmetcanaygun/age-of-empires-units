@@ -1,86 +1,102 @@
 .unit-details-page {
   padding: $py-lg $px-lg;
-  display: flex;
-  justify-content: space-between;
 
-  .info {
-    width: 60%;
-
-    .title {
-      font-family: $font-title;
-      display: flex;
-      align-items: center;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-
-      span {
-        font-family: $font-title;
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 20px;
-        border-radius: 50%;
-        background-color: $color-primary;
-        color: $color-light;
-        font-size: 1.8rem;
-      }
-    }
-
-    .description {
-      padding: 20px 10px;
-      border-radius: 10px;
-      background-color: $color-light;
-      color: $color-primary;
-      font-style: italic;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .description::before {
-      display: none;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: $color-primary;
-      padding: 6px 10px;
-      position: relative;
-      margin-bottom: 10px;
-
-      span {
-        color: $color-tertiary;
-        font-weight: bold;
-      }
-    }
-
-    p::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 60%;
-      border-radius: 3px;
-      background-color: $color-primary;
-    }
+  .back-to-units-link {
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 6px 20px;
+    background-color: darken($color-light, 3);
+    font-size: 14px;
+    border-radius: 6px;
   }
 
-  .img {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-self: flex-start;
-    animation: axeFloat 2s infinite ease-in-out;
+  .back-to-units-link:hover {
+    background-color: darken($color-light, 8);
+  }
 
-    img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      transform: rotateY(180deg);
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+
+    .info {
+      width: 60%;
+
+      .title {
+        font-family: $font-title;
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+
+        span {
+          font-family: $font-title;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          border-radius: 50%;
+          background-color: $color-primary;
+          color: $color-light;
+          font-size: 1.8rem;
+        }
+      }
+
+      .description {
+        padding: 20px 10px;
+        border-radius: 10px;
+        background-color: $color-light;
+        color: $color-primary;
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .description::before {
+        display: none;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $color-primary;
+        padding: 6px 10px;
+        position: relative;
+        margin-bottom: 10px;
+
+        span {
+          color: $color-tertiary;
+          font-weight: bold;
+        }
+      }
+
+      p::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 60%;
+        border-radius: 3px;
+        background-color: $color-primary;
+      }
+    }
+
+    .img {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-self: flex-start;
+      animation: axeFloat 2s infinite ease-in-out;
+
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        transform: rotateY(180deg);
+      }
     }
   }
 }
@@ -105,41 +121,44 @@
 @media (max-width: 768px) {
   .unit-details-page {
     padding: $py-lg $px-sm;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
-    .info {
-      width: 100%;
+    .details-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
 
-      .title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+      .info {
+        width: 100%;
 
-        span {
-          width: 50px;
-          height: 50px;
-          font-size: 1.3rem;
+        .title {
+          font-size: 2rem;
+          margin-bottom: 30px;
+
+          span {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+          }
+        }
+
+        .description {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          margin-bottom: 4px;
+        }
+
+        p::before {
+          width: 2px;
         }
       }
 
-      .description {
-        font-size: 1rem;
+      .img {
+        width: 100%;
+        justify-content: center;
       }
-
-      p {
-        font-size: 0.9rem;
-        margin-bottom: 4px;
-      }
-
-      p::before {
-        width: 2px;
-      }
-    }
-
-    .img {
-      width: 100%;
-      justify-content: center;
     }
   }
 }

@@ -721,6 +721,22 @@ a {
 
 .unit-details-page {
   padding: 60px 5%;
+}
+
+.unit-details-page .back-to-units-link {
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.unit-details-page .back-to-units-link:hover {
+  background-color: gainsboro;
+}
+
+.unit-details-page .details-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,11 +745,11 @@ a {
           justify-content: space-between;
 }
 
-.unit-details-page .info {
+.unit-details-page .details-container .info {
   width: 60%;
 }
 
-.unit-details-page .info .title {
+.unit-details-page .details-container .info .title {
   font-family: "MedievalSharp", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,7 +761,7 @@ a {
   margin-bottom: 40px;
 }
 
-.unit-details-page .info .title span {
+.unit-details-page .details-container .info .title span {
   font-family: "MedievalSharp", cursive;
   display: inline-block;
   width: 60px;
@@ -766,7 +782,7 @@ a {
   font-size: 1.8rem;
 }
 
-.unit-details-page .info .description {
+.unit-details-page .details-container .info .description {
   padding: 20px 10px;
   border-radius: 10px;
   background-color: #f0f0f0;
@@ -776,11 +792,11 @@ a {
   margin-bottom: 20px;
 }
 
-.unit-details-page .info .description::before {
+.unit-details-page .details-container .info .description::before {
   display: none;
 }
 
-.unit-details-page .info p {
+.unit-details-page .details-container .info p {
   font-size: 1.2rem;
   color: #635466;
   padding: 6px 10px;
@@ -788,12 +804,12 @@ a {
   margin-bottom: 10px;
 }
 
-.unit-details-page .info p span {
+.unit-details-page .details-container .info p span {
   color: #822043;
   font-weight: bold;
 }
 
-.unit-details-page .info p::before {
+.unit-details-page .details-container .info p::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -806,7 +822,7 @@ a {
   background-color: #635466;
 }
 
-.unit-details-page .img {
+.unit-details-page .details-container .img {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -820,7 +836,7 @@ a {
           animation: axeFloat 2s infinite ease-in-out;
 }
 
-.unit-details-page .img img {
+.unit-details-page .details-container .img img {
   width: 160px;
   height: 160px;
   -o-object-fit: cover;
@@ -862,6 +878,8 @@ a {
 @media (max-width: 768px) {
   .unit-details-page {
     padding: 60px 16px;
+  }
+  .unit-details-page .details-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -873,29 +891,29 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .unit-details-page .info {
+  .unit-details-page .details-container .info {
     width: 100%;
   }
-  .unit-details-page .info .title {
+  .unit-details-page .details-container .info .title {
     font-size: 2rem;
     margin-bottom: 30px;
   }
-  .unit-details-page .info .title span {
+  .unit-details-page .details-container .info .title span {
     width: 50px;
     height: 50px;
     font-size: 1.3rem;
   }
-  .unit-details-page .info .description {
+  .unit-details-page .details-container .info .description {
     font-size: 1rem;
   }
-  .unit-details-page .info p {
+  .unit-details-page .details-container .info p {
     font-size: 0.9rem;
     margin-bottom: 4px;
   }
-  .unit-details-page .info p::before {
+  .unit-details-page .details-container .info p::before {
     width: 2px;
   }
-  .unit-details-page .img {
+  .unit-details-page .details-container .img {
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;

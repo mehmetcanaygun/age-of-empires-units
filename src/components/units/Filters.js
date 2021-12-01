@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppContext from "../../context/appContext";
 
 const Filters = () => {
@@ -32,6 +32,25 @@ const Filters = () => {
       setFilters("cost", { ...filters.cost, Gold: { isActive, value } });
     }
   };
+
+  useEffect(() => {
+    return () => {
+      setFilters("cost", {
+        ...filters.cost,
+        Gold: { isActive: false, value: 0 },
+      });
+      setFilters("cost", {
+        ...filters.cost,
+        Wood: { isActive: false, value: 0 },
+      });
+      setFilters("cost", {
+        ...filters.cost,
+        Food: { isActive: false, value: 0 },
+      });
+    };
+
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <form className="unit-filters-form">
