@@ -37,6 +37,7 @@ const Filters = () => {
     <form className="unit-filters-form">
       <div className="age-filter">
         <button
+          data-testid="age-btn-all"
           className={filters.age.length === 4 ? "active" : ""}
           onClick={(e) =>
             handleAgeFilter(e, ["Dark", "Feudal", "Castle", "Imperial"])
@@ -45,6 +46,7 @@ const Filters = () => {
           All
         </button>
         <button
+          data-testid="age-btn-dark"
           className={
             filters.age.length === 1 && filters.age[0] === "Dark"
               ? "active"
@@ -55,6 +57,7 @@ const Filters = () => {
           Dark
         </button>
         <button
+          data-testid="age-btn-feudal"
           className={
             filters.age.length === 1 && filters.age[0] === "Feudal"
               ? "active"
@@ -65,6 +68,7 @@ const Filters = () => {
           Feudal
         </button>
         <button
+          data-testid="age-btn-castle"
           className={
             filters.age.length === 1 && filters.age[0] === "Castle"
               ? "active"
@@ -75,6 +79,7 @@ const Filters = () => {
           Castle
         </button>
         <button
+          data-testid="age-btn-imperial"
           className={
             filters.age.length === 1 && filters.age[0] === "Imperial"
               ? "active"
@@ -90,6 +95,7 @@ const Filters = () => {
         <div className="range-col">
           <label htmlFor="wood-checkbox">
             <input
+              data-testid="cost-checkbox-wood"
               type="checkbox"
               id="wood-checkbox"
               onChange={() => {
@@ -105,6 +111,7 @@ const Filters = () => {
             <span>Min: {wood} - Max: 200</span>
           </label>
           <input
+            data-testid="cost-range-wood"
             type="range"
             id="wood-range"
             min="0"
@@ -123,6 +130,7 @@ const Filters = () => {
         <div className="range-col">
           <label htmlFor="food-checkbox">
             <input
+              data-testid="cost-checkbox-food"
               type="checkbox"
               id="food-checkbox"
               onChange={() => {
@@ -138,6 +146,7 @@ const Filters = () => {
             <span>Min: {food} - Max: 200</span>
           </label>
           <input
+            data-testid="cost-range-food"
             type="range"
             id="food-range"
             min="0"
@@ -156,6 +165,7 @@ const Filters = () => {
         <div className="range-col">
           <label htmlFor="gold-checkbox">
             <input
+              data-testid="cost-checkbox-gold"
               type="checkbox"
               id="gold-checkbox"
               onChange={() => {
@@ -171,6 +181,7 @@ const Filters = () => {
             <span>Min: {gold} - Max: 200</span>
           </label>
           <input
+            data-testid="cost-range-gold"
             type="range"
             id="gold-range"
             min="0"
